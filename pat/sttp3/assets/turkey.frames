@@ -1,0 +1,12 @@
+{
+  "frameGrid" : {
+    "size" : [128, 128],
+    "dimensions" : [4, 4],
+    "names" : [
+      ["0", "1", "blink", "hit"],
+      ["gib.0", "gib.1", "gib.2"],
+      ["gib.3", "gib.4", "gib.5"],
+      ["gib.6", "gib.7", "gib.8"]
+    ]
+  }
+}

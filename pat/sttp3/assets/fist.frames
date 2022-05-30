@@ -1,0 +1,6 @@
+{
+  "frameGrid" : {
+    "size" : [256, 64],
+    "dimensions" : [1, 4]
+  }
+}

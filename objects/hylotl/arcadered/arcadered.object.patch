@@ -1,0 +1,13 @@
+[
+  {"op" : "add", "path" : "/interactAction", "value" : "ScriptPane"},
+  {"op" : "add", "path" : "/interactData", "value" : "/pat/sttp3/sttp3.sussy"},
+  
+  {"op" : "replace", "path" : "/description", "value" : "This machine runs a game called 'Super Turbo Turkey Puncher 3'."},
+  {"op" : "replace", "path" : "/apexDescription", "value" : "It's called Super Turbo Turkey Puncher 3. I think I'm supposed to punch this turkey. Interesting..."},
+  {"op" : "replace", "path" : "/avianDescription", "value" : "In Super Turbo Turkey Puncher 3, my dream of punching turkeys can finally be realized."},
+  {"op" : "replace", "path" : "/floranDescription", "value" : "Floran can punch turkeyss with handsss! How can Floran learn thiss trick?"},
+  {"op" : "replace", "path" : "/glitchDescription", "value" : "Amused. If I'm not careful, I'll waste the whole day playing Super Turbo Turkey Puncher 3. 10/10."},
+  {"op" : "replace", "path" : "/humanDescription", "value" : "In Super Turbo Turkey Puncher 3, you punch turkeys. It was really popular back on Earth."},
+  {"op" : "replace", "path" : "/hylotlDescription", "value" : "Super Turbo Turkey Puncher 3 was one of my favourite arcade games as a young Hylotl. I liked to punch the turkey."},
+  {"op" : "replace", "path" : "/novakidDescription", "value" : "Punchin' turkeys in Super Turbo Turkey Puncher 3 sure is time consumin'."}
+]

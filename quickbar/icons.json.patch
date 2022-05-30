@@ -1,0 +1,12 @@
+[
+  {
+    "op": "add",
+    "path": "/items/pat:sttp3",
+    "value": {
+      "label": "SuperTurboTurkeyPuncher3",
+			"icon": "/pat/sttp3/quickbar.png",
+      "weight": 3,
+      "action": [ "pane", "/pat/sttp3/sttp3.sussy" ]
+    }
+  }
+]

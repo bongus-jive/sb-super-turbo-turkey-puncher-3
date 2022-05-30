@@ -1,0 +1,85 @@
+{
+  "gui" : {
+    "background" : {
+      "zlevel" : 0,
+      "type" : "background",
+      "fileHeader" : "/pat/sttp3/assets/header.png",
+      "fileBody" : "/pat/sttp3/assets/body.png",
+      "fileFooter" : "/pat/sttp3/assets/header.png?flipy"
+    },
+    "overlay" : {
+      "zlevel" : 1,
+      "type" : "image",
+      "file" : "/pat/sttp3/assets/bgoverlay.png",
+      "position" : [14, 14]
+    },
+    "canvas" : {
+      "zlevel" : 2,
+      "type" : "canvas",
+      "rect" : [14, 14, 270, 234],
+      "captureMouseEvents" : true
+    },
+    "currentScore" : {
+      "zlevel" : 3,
+      "type" : "label",
+      "position" : [58, 209],
+      "value" : "^shadow;CURRENT SCORE"
+    }
+  },
+
+  "canvasClickCallbacks" : {"canvas" : "click"},
+  
+  "assetsPath" : "/pat/sttp3/assets/",
+  "assets" : {
+    "images" : {
+      "turkey" : "turkey.png",
+      "fist" : "fist.png",
+      "head" : "head.png",
+      "feather1" : "feather1.png",
+      "feather2" : "feather2.png",
+      "logo" : "logoa.png",
+      "logoline" : "logolinea.png"
+    },
+    "sounds" : {
+      "punch1" : "punch1.ogg",
+      "punch2" : "punch2.ogg",
+      "gib" : "turksquish22.ogg",
+      "loop" : "turkey_music_loop.ogg",
+      "sttp3" : "turkey_puncher_vo.ogg"
+    }
+  },
+  
+  "colors" : [[255, 0, 0], [255, 255, 0], [0, 255, 0], [0, 255, 255], [0, 0, 255], [255, 0, 255]],
+  "colorTime" : 1.2,
+  
+  "turkeyOffset" : [0, -44],
+  "turkeyHealth" : 6,
+  "turkeyDieTime" : 0.4,
+  "turkeyDieFrames" : 9,
+  "turkeyRespawnTime" : 1.25,
+  
+  "fistFrames" : 4,
+  "punchTime" : 0.06,
+  "hitTime" : 0.18,
+  
+  "headPosition" : [5, 175],
+  "headTime" : 0.9,
+  "headFrames" : 3,
+  
+  "punchPoints" : [10, 25],
+  "scorePositioning" : {"position" : [44, 193]},
+  "scoreFontSize" : 16,
+  "pointsTextPositions" : [[80, 110], [140, 70]],
+  "pointsTextRise" : 20,
+  "pointsTextTime" : 0.6,
+  "pointsTextFontSize" : 12,
+  
+  "blinkTime" : 0.15,
+  "blinkTimeRange" : [2.5, 4.5],
+  "turkeyAnimTime" : 4,
+  "turkeyAnimFrames" : 2,
+  
+  "cursor" : "/pat/sttp3/cursor.cursor",
+  
+  "scripts" : ["/pat/sttp3/sttp3.lua"]
+}
