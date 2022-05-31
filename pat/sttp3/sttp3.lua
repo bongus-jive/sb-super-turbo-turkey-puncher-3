@@ -69,6 +69,15 @@ function init()
   TurkeyAnimTime = getParam("turkeyAnimTime")
   TurkeyAnimFrames = getParam("turkeyAnimFrames")
   
+  FeatherFallTimer = 0
+  FeatherFallTime = getParam("featherFallTime")
+  FeatherPositions = getParam("featherPositions")
+  FeatherEndPositions = {}
+  local featherFall = getParam("featherFall")
+  for i,v in ipairs(FeatherPositions) do
+    FeatherEndPositions[i] = vec2.add(v, {0, featherFall[i]})
+  end
+  
   Cursor = getParam("cursor")
 end
 
@@ -112,6 +121,7 @@ function update(dt)
       Health = Health - 1
       if Health == 0 then
         DieTimer = 1
+        FeatherFallTimer = 1
         pane.playSound(Assets.sounds.gib)
       end
     end
@@ -119,6 +129,17 @@ function update(dt)
   elseif PunchTimer > 0 then
     PunchTimer = math.max(0, PunchTimer - dt / HitTime)
     turkeyFrame = "hit"
+  end
+  
+  --feathers
+  if FeatherFallTimer > 0 then
+    FeatherFallTimer = math.max(0, FeatherFallTimer - dt / FeatherFallTime)
+    
+    for i,v in pairs(FeatherPositions) do
+      local pos = vec2.lerp(FeatherFallTimer, FeatherEndPositions[i], v)
+      local color = string.format("#FFFFFF%02x", math.floor(FeatherFallTimer * 255))
+      Canvas:drawImage(Assets.images["feather"..i], pos, nil, color, true)
+    end
   end
   
   --Die
@@ -192,11 +213,16 @@ function click(position, button, isButtonDown)
   end
 end
 
+function cursorOverride(pos)
+  if widget.getChildAt(pos) == ".canvas" then
+    return Cursor
+  end
+end
+
 function uninit()
   pane.stopAllSounds(Assets.sounds.loop)
   pane.stopAllSounds(Assets.sounds.sttp3)
 end
-
 
 local function lerpColor(ratio, a, b)
 	local r = util.lerp(ratio, a[1], b[1])
@@ -210,10 +236,4 @@ function updateColors(dt)
   local t = ColorTimer * #Colors
   local i = math.floor(t)
   return lerpColor(t - i, Colors[i + 1], Colors[i + 2] or Colors[1])
-end
-
-function cursorOverride(pos)
-  if widget.getChildAt(pos) == ".canvas" then
-    return Cursor
-  end
 end

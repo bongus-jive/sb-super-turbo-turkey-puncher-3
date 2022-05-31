@@ -22,7 +22,7 @@
     "currentScore" : {
       "zlevel" : 3,
       "type" : "label",
-      "position" : [58, 209],
+      "position" : [58, 208],
       "value" : "^shadow;CURRENT SCORE"
     }
   },
@@ -67,7 +67,7 @@
   "headFrames" : 3,
   
   "punchPoints" : [10, 25],
-  "scorePositioning" : {"position" : [44, 193]},
+  "scorePositioning" : {"position" : [44, 192]},
   "scoreFontSize" : 16,
   "pointsTextPositions" : [[80, 110], [140, 70]],
   "pointsTextRise" : 20,
@@ -78,6 +78,10 @@
   "blinkTimeRange" : [2.5, 4.5],
   "turkeyAnimTime" : 4,
   "turkeyAnimFrames" : 2,
+  
+  "featherPositions" : [[125, 95], [105, 80]],
+  "featherFall" : [-35, -40],
+  "featherFallTime" : 1.5,
   
   "cursor" : "/pat/sttp3/cursor.cursor",
   
