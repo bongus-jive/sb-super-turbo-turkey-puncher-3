@@ -157,7 +157,7 @@ function update(dt)
     
     local r = util.interpolateSigmoid(RespawnTimer, 0, 1)
     local pos = vec2.lerp(r, TurkeyPosition, RespawnPosition)
-    Canvas:drawImage(Assets.images.turkey..":0", pos, nil, nil, true)
+    Canvas:drawImage(Assets.images.turkey..":"..turkeyFrame, pos, nil, nil, true)
     
     turkeyColor = string.format("#FFFFFF%02x", math.floor(RespawnTimer * 255))
     turkeyFrame = "gib."..DieFrames
@@ -220,8 +220,9 @@ function cursorOverride(pos)
 end
 
 function uninit()
-  pane.stopAllSounds(Assets.sounds.loop)
-  pane.stopAllSounds(Assets.sounds.sttp3)
+  for _,s in pairs(Assets.sounds) do
+    pane.stopAllSounds(s)
+  end
 end
 
 local function lerpColor(ratio, a, b)
