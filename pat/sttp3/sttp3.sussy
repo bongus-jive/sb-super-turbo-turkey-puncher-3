@@ -24,7 +24,15 @@
       "type" : "label",
       "position" : [58, 208],
       "value" : "^shadow;CURRENT SCORE"
-    }
+    },
+		"close" : {
+			"type" : "button",
+			"base" : "/interface/x.png",
+			"hover" : "/interface/xhover.png",
+			"pressed" : "/interface/xpress.png",
+			"pressedOffset" : [0, 0],
+			"position" : [272, 234]
+		}
   },
 
   "canvasClickCallbacks" : {"canvas" : "click"},
