@@ -3,7 +3,7 @@
     "op": "add",
     "path": "/items/pat:sttp3",
     "value": {
-      "label": "SuperTurboTurkeyPuncher3",
+      "label": "^#f2779c;S^#ff80ce;u^#de73ff;p^#996cfd;e^#7b65ee;r ^#6e6bff;T^#6774dd;u^#6781dd;r^#6a97d8;b^#71a5e2;o ^#86d7ff;T^#95ffff;u^#80ffb9;r^#7fe292;k^#96e983;e^#d3f585;y ^#f3e87c;P^#ecb660;u^#ec8e60;n^#eb7868;c^#eb746e;h^#e4676b;e^#d86673;r ^#ee6c8a;3",
 			"icon": "/pat/sttp3/quickbar.png",
       "weight": 3,
       "action": [ "pane", "/pat/sttp3/sttp3.sussy" ]
