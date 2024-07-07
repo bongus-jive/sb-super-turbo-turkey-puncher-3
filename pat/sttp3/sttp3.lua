@@ -77,6 +77,10 @@ function init()
   for i,v in ipairs(FeatherPositions) do
     FeatherEndPositions[i] = vec2.add(v, {0, featherFall[i]})
   end
+
+  Highscore = getParam("highscore")
+  HighscoreMessages = getParam("highscoreRadioMessages")
+  HighscoreReached = false
   
   Cursor = getParam("cursor")
 end
@@ -202,6 +206,10 @@ function click(position, button, isButtonDown)
       points = points * 10
     end
     Score = Score + points
+
+    if not HighscoreReached and Score >= Highscore then
+      newHighscore()
+    end
     
     local pos = vec2.lerp(Health / MaxHealth, PointsTextPositions[2], PointsTextPositions[1])
     PointsText[#PointsText + 1] = {
@@ -210,6 +218,13 @@ function click(position, button, isButtonDown)
       startPos = pos,
       endPos = vec2.add(pos, {0, PointsTextRise})
     }
+  end
+end
+
+function newHighscore()
+  HighscoreReached = true
+  for i, message in ipairs(HighscoreMessages) do
+    player.radioMessage(message)
   end
 end
 

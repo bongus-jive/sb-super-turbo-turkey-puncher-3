@@ -92,6 +92,32 @@
   "featherFallTime" : 1.5,
   
   "cursor" : "/pat/sttp3/cursor.cursor",
+
+  "highscore": 25000,
+  "highscoreRadioMessages": [
+    {
+      "messageId": "pat_sttp3_highscore1",
+      "unique": false,
+      "senderName": "HR Coordinator",
+      "text": "Congratulations! You set a new high score in Super Turbo Turkey Puncher 3!!!\nYour parents can rest easier knowing they have raised another shining example of humanity.",
+      "persistTime": 3.0,
+      "textSpeed": 50,
+      "portraitImage": "/interface/chatbubbles/soundonly.png:<frame>?saturation=-100?multiply=f7d251",
+      "portraitFrames": 4,
+      "chatterSound" : "/sfx/interface/aichatter2_loop.ogg"
+    },
+    {
+      "messageId": "pat_sttp3_highscore2",
+      "unique": false,
+      "senderName": "HR Coordinator",
+      "text": "Due to the incredible amount of time you wasted punching poor defenseless turkeys, your vacation time has been docked two days.\nHave a nice day.",
+      "persistTime": 3.0,
+      "textSpeed": 50,
+      "portraitImage": "/interface/chatbubbles/soundonly.png:<frame>?saturation=-100?multiply=f7d251",
+      "portraitFrames": 4,
+      "chatterSound" : "/sfx/interface/aichatter2_loop.ogg"
+    }
+  ],
   
   "scripts" : ["/pat/sttp3/sttp3.lua"]
 }
